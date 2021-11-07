@@ -1,0 +1,43 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  
+}
+img{
+  height: 200px;
+}
+
+h1{
+  color: gold;
+  font-size: 6rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentContainer{
+  border: solid gray;
+  
+}

@@ -1,0 +1,47 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  
+  
+}
+img{
+  height: 200px;
+}
+
+
+.title{
+  color: gold;
+  font-size: 6rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message{
+  margin-top: 3%;
+  border: solid lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.likeBtn, .dislikeBtn{
+  width: 60%;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.likeCount{
+  color: pink;
+  font-size: 5rem;
+}

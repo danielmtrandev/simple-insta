@@ -4,36 +4,34 @@
     <title>Gardner Gram</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/feed.css">
 </head>
 <body>
 <div class="container">
 
     <div class="page-header text-center">
-        <h1>Feed</h1>
+        <p class="title">News Feed</p>
         <a href="/profile">Profile</a>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
     </div>
 
-    <div class="row">
-
-
-        <div class="col-sm-6">
-          <h3>Feed</h3>
-          <ul class="messages">
-          <% for(var i=0; i<posts.length; i++) {%>
-            <li class="message">
-              <a href="/post/<%= posts[i]._id %>">
-                <img src="<%= posts[i].img %>" alt="">
-                <h4><%= posts[i].caption %></h4>
-              </a>  
-              <a href="/page/<%= posts[i].postedBy %>"><%= posts[i].postedBy %></a>
-              <span class="likeCount" data-id="<%= posts[i]._id %>"><%= posts[i].postLikes %></span>
-              <button class="likeBtn" data-id="<%= posts[i]._id %>">Like</button>
-              <button class="dislikeBtn" data-id="<%= posts[i]._id %>">DisLike</button>
-            </li>
-          <% } %>
-          </ul>
+    <div class="col-sm-6" id="feedContainer">
+      <ul class="messages">
+      <% for(var i=0; i<posts.length; i++) {%>
+        <li class="message">
+          <a href="/page/<%= posts[i].postedBy %>">POSTED BY: <%= posts[i].postedBy %></a>
+          <a href="/post/<%= posts[i]._id %>">
+            <img src="<%= posts[i].img %>" alt="">
+            <h4>"<%= posts[i].caption %>"</h4>
+          </a>  
+          <span class="likeCount" data-id="<%= posts[i]._id %>">LIKES: <%= posts[i].postLikes %></span>
+          <div class="buttonContainer">
+            <button class="likeBtn" data-id="<%= posts[i]._id %>">Like</button>
+            <button class="dislikeBtn" data-id="<%= posts[i]._id %>">Unlike</button>
+          </div>
+        </li>
+      <% } %>
+      </ul>
 
 
 </div>

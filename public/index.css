@@ -1,0 +1,22 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  
+}
+img{
+  height: 200px;
+}
+
+.container div{ 
+  background: transparent;
+}
+
+
+.title{
+  color: gold;
+  font-size: 8rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+

@@ -4,7 +4,7 @@
     <title>Gardner Gram</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/post.css">
 </head>
 <body>
 <div class="container">
@@ -16,12 +16,11 @@
     </div>
     <div class="row">
       <div class="col-sm-6">
-        <h3>Post</h3>
         <ul class="messages">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="message">
-            <h4><%= posts[i].caption %></h4>
             <img src="../<%= posts[i].img %>" alt="">
+            <h4><%= posts[i].caption %></h4>
             <!-- Comment Form -->
             <form action="/comment/<%= posts[i]._id %>" method="POST">
                 <input type="text" placeholder="Comment" name="comment">
@@ -30,10 +29,12 @@
           </li>
         <% } %>
         </ul>
-        <h3>comments</h3>
-          <%comments.forEach(comment => {%>
-            <p><%=comment.comment%></p>
-          <%})%>
+        <div class="commentContainer">
+          <h3>comments</h3>
+            <%comments.forEach(comment => {%>
+              <p><%=comment.comment%></p>
+            <%})%>
+        </div>
       </div>
     </div>
 </div>
